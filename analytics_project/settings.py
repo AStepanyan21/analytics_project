@@ -25,7 +25,7 @@ DATABASES = {
     }
 }
 
-if "test" in sys.argv:
+if "test" in sys.argv or "pytest" in sys.modules:
     DATABASES["default"] = {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": ":memory:",
