@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "analytics-project"
+version = "0.1.0"
+description = ""
+authors = ["artyom <astepanya1996@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.2.3"
+djangorestframework = "^3.16.0"
+django-filter = "^25.1"
+requests = "^2.32.4"
+black = "^25.1.0"
+httpx = "^0.28.1"
+asgiref = "^3.8.1"
+drf-spectacular = "^0.28.0"
+psycopg2-binary = "^2.9.10"
+python-dotenv = "^1.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+isort = "^6.0.1"
+mypy = "^1.16.1"
+django-stubs = "^5.2.1"
+djangorestframework-stubs = "^3.16.0"
+pytest = "^8.4.1"
+pytest-django = "^4.11.1"
+pytest-asyncio = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 88
